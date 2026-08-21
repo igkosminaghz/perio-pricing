@@ -23,6 +23,14 @@ export const hr: Messages = {
     hr: 'HR',
     label: 'Jezik',
   },
+  gate: {
+    title: 'Perio Atlas',
+    lede: 'Unesite lozinku ordinacije da otvorite planer.',
+    password: 'Lozinka',
+    unlock: 'Otvori',
+    wrong: 'Ta lozinka nije točna.',
+    hint: 'Jednostavna brava za osoblje — ovo je alat za planiranje, ne sustav kartona.',
+  },
   actions: {
     importJson: 'Uvezi JSON',
     exportJson: 'Izvezi JSON',

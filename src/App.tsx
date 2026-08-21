@@ -6,6 +6,7 @@ import { AboutModel, Sources, PrintSheet, Footer } from './components/About'
 import { useClinicState } from './hooks/useClinicState'
 import { exportPayload, mergeImported, defaultState } from './lib/storage'
 import { I18nProvider, useI18n } from './i18n'
+import { SiteGate } from './components/SiteGate'
 import { Planner } from './components/Planner'
 import { Membership } from './components/Membership'
 import type { AppMode, PersistedState } from './types'
@@ -26,7 +27,9 @@ function loadMode(): AppMode {
 export default function App() {
   return (
     <I18nProvider>
-      <AppShell />
+      <SiteGate>
+        <AppShell />
+      </SiteGate>
     </I18nProvider>
   )
 }

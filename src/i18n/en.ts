@@ -21,6 +21,14 @@ export const en = {
     hr: 'HR',
     label: 'Language',
   },
+  gate: {
+    title: 'Perio Atlas',
+    lede: 'Enter the clinic password to open the planner.',
+    password: 'Password',
+    unlock: 'Unlock',
+    wrong: 'That password is not right.',
+    hint: 'A casual lock for staff — this is a planning tool, not a records system.',
+  },
   actions: {
     importJson: 'Import JSON',
     exportJson: 'Export JSON',
