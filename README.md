@@ -34,17 +34,23 @@ npm run preview
 
 The compiled site is in `dist/` (`base: './'` so it also works as a downloadable folder). Zip `dist/` or this repo for an offline copy.
 
-## Deploy on Render (static site)
+## Deploy
 
-`render.yaml` is a Blueprint: build `npm install && npm run build`, publish `dist`, SPA rewrite to `index.html`.
+Live GitHub Pages: **https://igkosminaghz.github.io/perio-pricing/**
 
-1. Push this folder to a Git repository (GitHub, GitLab, or Bitbucket).
-2. In [Render](https://dashboard.render.com), **New → Blueprint** (or **New → Static Site**) and connect the repo.
+Push to `main` rebuilds that site (`.github/workflows/deploy-pages.yml`). Vite `base` stays `./` for Render and local `dist`; Pages sets `VITE_BASE=/perio-pricing/` in CI only.
+
+### Render (static site)
+
+`render.yaml` is a Blueprint: build `npm ci && npm run build`, publish `dist`, SPA rewrite to `index.html`.
+
+1. Repo: https://github.com/igkosminaghz/perio-pricing
+2. In [Render](https://dashboard.render.com), **New → Blueprint** (or **New → Static Site**) and connect that repo.
 3. Use these settings if you create the service by hand:
 
 | Setting | Value |
 | --- | --- |
-| Build command | `npm install && npm run build` |
+| Build command | `npm ci && npm run build` |
 | Publish directory | `dist` |
 
 Custom domain: add it under the static site’s **Settings**.
