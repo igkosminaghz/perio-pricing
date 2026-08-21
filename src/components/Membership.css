@@ -1,0 +1,387 @@
+.membership {
+  --mem-pine: #14352f;
+  --mem-teal: #1c4f48;
+  --mem-sage: #8aa396;
+  --mem-ivory: #f4efe6;
+  --mem-gold: #c4a574;
+}
+
+.membership-lede {
+  max-width: 72ch;
+}
+
+.membership-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: end;
+  margin: 1.6rem 0 1.8rem;
+}
+
+.membership-toolbar label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bronze, #8f7048);
+}
+
+.membership-toolbar select,
+.membership-toolbar input {
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  background: var(--ivory-2, #fbf8f2);
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  color: var(--ink, #2a2723);
+  min-width: 11rem;
+}
+
+.membership-seg {
+  display: inline-flex;
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 252, 247, 0.7);
+}
+
+.membership-seg button {
+  border: 0;
+  background: transparent;
+  padding: 0.45rem 0.95rem;
+  cursor: pointer;
+  color: var(--muted, #6b655c);
+}
+
+.membership-seg button.is-on {
+  background: var(--mem-pine);
+  color: var(--mem-ivory);
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem;
+  margin: 0 0 1.6rem;
+}
+
+.mem-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 1.15rem 1.15rem 1.25rem;
+  background: var(--card, rgba(255, 252, 247, 0.78));
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(20, 53, 47, 0.08);
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  min-width: 0;
+}
+
+.mem-card:hover {
+  border-color: rgba(196, 165, 116, 0.55);
+}
+
+.mem-card.is-active {
+  border-color: var(--mem-gold);
+  box-shadow: 0 18px 50px rgba(20, 53, 47, 0.1), inset 0 0 0 1px rgba(196, 165, 116, 0.35);
+}
+
+.mem-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.mem-roman {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--mem-gold);
+  letter-spacing: 0.08em;
+}
+
+.mem-wait {
+  font-size: 0.75rem;
+  color: var(--muted, #6b655c);
+  letter-spacing: 0.04em;
+}
+
+.mem-card h3 {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+.mem-intended {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted, #6b655c);
+}
+
+.mem-fee {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.mem-fee span {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bronze, #8f7048);
+}
+
+.mem-fee input {
+  width: 100%;
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  background: var(--ivory-2, #fbf8f2);
+  border-radius: 12px;
+  padding: 0.45rem 0.65rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mem-split {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mem-split-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: var(--stone, #e6dfd2);
+}
+
+.mem-split-bar i:first-child {
+  background: var(--mem-gold);
+}
+
+.mem-split-bar i:last-child {
+  background: var(--mem-sage);
+}
+
+.mem-split-legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted, #6b655c);
+  font-variant-numeric: tabular-nums;
+}
+
+.mem-inc {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.84rem;
+}
+
+.mem-inc li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.45rem;
+}
+
+.mem-inc b {
+  font-weight: 500;
+  color: var(--mem-teal);
+  font-variant-numeric: tabular-nums;
+}
+
+.mem-proto {
+  margin: 0;
+  padding-left: 1.05rem;
+  font-size: 0.8rem;
+  color: var(--muted, #6b655c);
+}
+
+.mem-proto li {
+  margin: 0.28rem 0;
+}
+
+.mem-goal {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  color: var(--mem-pine);
+}
+
+.mem-panel {
+  padding: 1.2rem 1.3rem 1.4rem;
+  background: var(--card, rgba(255, 252, 247, 0.78));
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  border-radius: 18px;
+  margin-bottom: 1.6rem;
+}
+
+.mem-panel h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+}
+
+.mem-math {
+  margin: 0 0 1rem;
+  max-width: 88ch;
+  font-size: 0.9rem;
+  color: var(--muted, #6b655c);
+}
+
+.mem-copay-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem 1rem;
+}
+
+.mem-copay-grid label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  color: var(--mem-pine);
+}
+
+.mem-copay-grid input[type='range'] {
+  width: 100%;
+  accent-color: var(--mem-teal);
+}
+
+.mem-copay-grid .mem-copay-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.mem-copay-grid input[type='number'] {
+  width: 4.6rem;
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  background: var(--ivory-2, #fbf8f2);
+  border-radius: 10px;
+  padding: 0.28rem 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mem-personas {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.mem-persona {
+  overflow: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  background: var(--card, rgba(255, 252, 247, 0.78));
+}
+
+.mem-persona header {
+  padding: 1rem 1.15rem 0.4rem;
+}
+
+.mem-persona h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.45rem;
+}
+
+.mem-persona header p {
+  margin: 0 0 0.7rem;
+  color: var(--muted, #6b655c);
+  font-size: 0.9rem;
+  max-width: 90ch;
+}
+
+.mem-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.mem-table th,
+.mem-table td {
+  padding: 0.65rem 0.9rem;
+  border-top: 1px solid var(--line, rgba(20, 53, 47, 0.12));
+  text-align: left;
+  vertical-align: top;
+}
+
+.mem-table th {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bronze, #8f7048);
+  background: rgba(20, 53, 47, 0.04);
+}
+
+.mem-table .num {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.mem-table .is-best {
+  background: rgba(138, 163, 150, 0.16);
+}
+
+.mem-flag {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--bronze, #8f7048);
+}
+
+.mem-flag.is-loss {
+  color: #7a3333;
+}
+
+.mem-roi-wrap {
+  margin-top: 1.6rem;
+}
+
+.mem-note {
+  margin: 0.9rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--mem-gold);
+  background: rgba(20, 53, 47, 0.04);
+  font-size: 0.88rem;
+  color: var(--mem-pine);
+}
+
+.mem-note.is-warn {
+  border-left-color: #8f4a3a;
+}
+
+.mem-subhead {
+  margin: 2.2rem 0 0.7rem;
+}
+
+.mem-subhead h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0.15rem 0 0.45rem;
+}
+
+.mem-subhead p {
+  margin: 0;
+  max-width: 75ch;
+  color: var(--muted, #6b655c);
+}
+
+@media (max-width: 1100px) {
+  .membership-grid,
+  .mem-copay-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .membership-grid,
+  .mem-copay-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .membership-toolbar button {
+    display: none;
+  }
+}

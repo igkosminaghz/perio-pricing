@@ -1,0 +1,128 @@
+import type { BundleDef } from '../types'
+
+export const defaultBundles: BundleDef[] = [
+  {
+    id: 'new-patient',
+    name: 'New periodontal patient pathway',
+    description:
+      'The first 8–10 weeks: specialist exam, imaging, GBT, four-quadrant SRP, and the first supportive visit. Economic path uses closed SRP; high-end adds dual-jaw CBCT and microscope-grade debridement time already priced into SRP.',
+    pathway: 'Diagnosis → cause-related therapy → first SPT',
+    procedureIds: ['perio-exam', 'opg', 'cbct-full', 'gbt', 'srp-quad', 'srp-quad', 'srp-quad', 'srp-quad', 'spt'],
+    discountType: 'percent',
+    discountValue: 8,
+  },
+  {
+    id: 'fmd-24h',
+    name: 'Full-mouth disinfection, 24 hours',
+    description:
+      'Compressed protocol for motivated adults with generalised periodontitis: exam, GBT, FMD course, and local antimicrobials at residual deep sites (×4).',
+    pathway: 'Same-day / next-day disinfection',
+    procedureIds: ['perio-exam', 'gbt', 'fmd', 'local-abx', 'local-abx', 'local-abx', 'local-abx'],
+    discountType: 'percent',
+    discountValue: 10,
+  },
+  {
+    id: 'spt-year',
+    name: '12-month supportive care',
+    description: 'Four SPT visits for a treated, high-risk patient (3-monthly). The discount rewards remaining in the specialist recall system.',
+    pathway: 'Maintenance year',
+    procedureIds: ['spt', 'spt', 'spt', 'spt'],
+    discountType: 'percent',
+    discountValue: 12,
+  },
+  {
+    id: 'recession-three',
+    name: 'Three-tooth tunnel / CAF coverage',
+    description: 'Single surgical field covering three adjacent recessions with CTG or tunnel, plus one-week review bundled into the surgical fee (review not billed separately).',
+    pathway: 'Mucogingival surgery',
+    procedureIds: ['perio-exam', 'tunnel', 'tunnel', 'tunnel', 'prf'],
+    discountType: 'percent',
+    discountValue: 7,
+  },
+  {
+    id: 'regen-intrabony',
+    name: 'Intrabony defect — regenerative',
+    description:
+      'Economic path: GTR small defect + membrane + graft. High-end path is intended to be quoted as Emdogain site + PRF (toggle the included lines if you prefer one biologic family).',
+    pathway: 'Reconstructive perio surgery',
+    procedureIds: ['perio-exam', 'cbct-seg', 'emdogain', 'prf'],
+    discountType: 'percent',
+    discountValue: 5,
+  },
+  {
+    id: 'hopeless-to-implant',
+    name: 'Hopeless tooth to delayed implant',
+    description:
+      'Surgical extraction, socket preservation, later premium guided implant. Abutment and crown are not included — they belong on the prosthetic list.',
+    pathway: 'Exit & replace',
+    procedureIds: ['ex-surg', 'socket', 'implant-prem'],
+    discountType: 'percent',
+    discountValue: 6,
+  },
+  {
+    id: 'peri-implant-save',
+    name: 'Peri-implantitis reconstructive attempt',
+    description: 'Non-surgical debridement, then regenerative peri-implant surgery with biologics. Honest consent still required: not every implant is saveable.',
+    pathway: 'Implant salvage',
+    procedureIds: ['peri-ns', 'peri-regen', 'spt'],
+    discountType: 'percent',
+    discountValue: 5,
+  },
+  {
+    id: 'endoscopic-crt',
+    name: 'Endoscopic cause-related therapy',
+    description:
+      'Specialist exam, GBT, then four-quadrant videoscope debridement. For residual deep pockets when the patient prefers to delay or avoid a flap. Stack, do not duplicate, conventional SRP in the same field.',
+    pathway: 'Diagnosis → endoscopic CRT',
+    procedureIds: ['perio-exam', 'gbt', 'endo-perio-quad', 'endo-perio-quad', 'endo-perio-quad', 'endo-perio-quad'],
+    discountType: 'percent',
+    discountValue: 8,
+  },
+  {
+    id: 'vista-three',
+    name: 'Three-tooth VISTA field',
+    description:
+      'Named VISTA tunnel on three adjacent teeth with PRF. Aligns with the user’s Croatian MCAT-class optimum case; Emdogain can be stacked as SCTG+EMD instead when a graft is harvested.',
+    pathway: 'Mucogingival — named tunnel',
+    procedureIds: ['perio-exam', 'vista', 'vista', 'vista', 'prf'],
+    discountType: 'percent',
+    discountValue: 7,
+  },
+  {
+    id: 'sctg-emd-site',
+    name: 'SCTG + Emdogain recession site',
+    description: 'Single-tooth dual-adjunct coverage (graft + EMD) as in the ingested Croatian optimum case, plus PRF.',
+    pathway: 'Mucogingival — biologics',
+    procedureIds: ['perio-exam', 'sctg-emd', 'prf'],
+    discountType: 'percent',
+    discountValue: 5,
+  },
+  {
+    id: 'emd-bone-site',
+    name: 'Emdogain + bone regenerative site',
+    description: 'Combined construct for a non-contained intrabony defect, with CBCT planning.',
+    pathway: 'Reconstructive perio surgery',
+    procedureIds: ['perio-exam', 'cbct-seg', 'emdogain-bone', 'prf'],
+    discountType: 'percent',
+    discountValue: 5,
+  },
+  {
+    id: 'peri-implantoplasty-save',
+    name: 'Peri-implantitis — implantoplasty + regeneration',
+    description:
+      'Non-surgical start, named implantoplasty, then reconstructive graft/membrane, followed by structured SPIC. Honest consent still required.',
+    pathway: 'Implant salvage',
+    procedureIds: ['peri-ns', 'peri-implantoplasty', 'peri-regen', 'spic'],
+    discountType: 'percent',
+    discountValue: 6,
+  },
+  {
+    id: 'spic-year',
+    name: '12-month supportive peri-implant care',
+    description: 'Four SPIC visits for a high-risk implant patient. Distinct from tooth SPT.',
+    pathway: 'Implant maintenance year',
+    procedureIds: ['spic', 'spic', 'spic', 'spic'],
+    discountType: 'percent',
+    discountValue: 12,
+  },
+]

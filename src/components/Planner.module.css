@@ -1,0 +1,395 @@
+.formCard,
+.notes,
+.timelineCard {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.formCard {
+  padding: 1.15rem 1.25rem 1.35rem;
+  margin: 1.5rem 0 1.1rem;
+}
+
+.formGrid {
+  display: grid;
+  gap: 1.15rem 1.4rem;
+}
+
+.seg {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.seg legend,
+.fieldLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin-bottom: 0.45rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--ivory-2);
+  color: var(--pine);
+  border-radius: 999px;
+  padding: 0.38rem 0.85rem;
+  cursor: pointer;
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--pine);
+  border-color: var(--pine);
+  color: var(--ivory);
+}
+
+.chip:focus-visible,
+.num:focus-visible,
+.select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.hostRow,
+.chartGrid {
+  display: grid;
+  gap: 0.65rem 1rem;
+}
+
+.hostRow {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.chartGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0.35rem;
+}
+
+.check {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.28rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.num,
+.select {
+  border: 1px solid var(--line);
+  background: var(--ivory-2);
+  border-radius: 12px;
+  padding: 0.48rem 0.7rem;
+  color: var(--ink);
+  width: 100%;
+}
+
+.hint {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.diagnosis {
+  margin: 1.1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(20, 53, 47, 0.92), var(--teal));
+  color: var(--ivory);
+}
+
+.diagnosis strong {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ivory);
+}
+
+.diagnosis span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+  color: var(--gold-soft);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.notes {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0.4rem 0.2rem;
+}
+
+.notes li {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.notes li:last-child {
+  border-bottom: 0;
+}
+
+.notes .caution {
+  background: rgba(139, 58, 58, 0.06);
+}
+
+.notes .host {
+  background: rgba(196, 165, 116, 0.12);
+}
+
+.kpis :global(.kpi) {
+  min-width: 0;
+}
+
+.flagKpi {
+  box-shadow: inset 0 0 0 1px rgba(196, 165, 116, 0.45);
+}
+
+.timelineCard {
+  padding: 1.2rem 1.15rem 1.4rem;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1.2rem;
+  top: 0.4rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--teal), var(--gold));
+}
+
+.visit {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.9rem 1rem;
+  padding: 0 0 1.35rem;
+}
+
+.visit:last-child {
+  padding-bottom: 0;
+}
+
+.rail {
+  position: relative;
+  z-index: 1;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ivory);
+  background: var(--pine);
+  box-shadow: inset 0 0 0 1px rgba(196, 165, 116, 0.4);
+}
+
+.phase-diagnostics {
+  background: var(--pine);
+}
+
+.phase-hygiene {
+  background: var(--teal);
+}
+
+.phase-nonsurgical {
+  background: #2f6a62;
+}
+
+.phase-reeval {
+  background: var(--bronze);
+}
+
+.phase-surgical,
+.phase-reconstructive {
+  background: #5c4030;
+}
+
+.phase-spt {
+  background: var(--sage);
+  color: var(--pine-deep);
+}
+
+.body {
+  min-width: 0;
+  padding: 0.15rem 0 0;
+}
+
+.gap {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.head h3 {
+  margin: 0;
+  font-size: 1.28rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: rgba(255, 252, 247, 0.7);
+}
+
+.pillGold {
+  border-color: rgba(196, 165, 116, 0.55);
+  color: var(--bronze);
+  background: rgba(196, 165, 116, 0.16);
+}
+
+.note {
+  margin: 0.35rem 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.lines li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.7rem;
+  align-items: baseline;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--line);
+  padding: 0.22rem 0;
+}
+
+.lines em,
+.mins {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.82rem;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+}
+
+.foot strong {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--pine-deep);
+}
+
+.chartSummary {
+  margin: 0.8rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (min-width: 900px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spanAll {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .hostRow,
+  .chartGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lines li {
+    grid-template-columns: 1fr auto;
+  }
+
+  .mins {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hostRow,
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 0.95rem;
+  }
+}
+
+@media print {
+  .formCard,
+  .toolbar {
+    display: none !important;
+  }
+
+  .visit {
+    break-inside: avoid;
+  }
+
+  :global(body.planner-print-active) :global(.print-sheet:not(#planner-print-sheet)) {
+    display: none !important;
+  }
+}
